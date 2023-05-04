@@ -1,9 +1,8 @@
-from flask import Flask,render_template,request
-import joblib
 import os
-import numpy as np
 import pickle
-import sklearn
+import joblib
+import numpy as np
+from flask import Flask, render_template, request
 
 app=Flask(__name__)
 
