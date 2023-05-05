@@ -14,10 +14,6 @@
 </head>
 
 <body class="bg-dark text-light">
-    <!--div class="alert alert-dark alert-dismissible fade show text-center mb-0" role="alert">
-        <strong>Hello and welcome to the Brain Stroke Prediction Engine</strong> 
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand text-danger" href="#">Prédiction des risques d'AVC</a>
@@ -35,7 +31,7 @@
                         <a class="nav-link active" aria-current="page">Analysis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/informations">A propos</a>
+                        <a class="nav-link active" aria-current="page">A propos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page">Contact us</a>
@@ -48,7 +44,16 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </nav> <br><br><br><br>
+    <div>
+        <p>Le site simulateur de risque d'AVC est un outil en ligne qui permet à l'utilisateur de connaître ses risques de faire un AVC en fonction de certaines caractéristiques personnelles. Le principe est simple : l'utilisateur doit renseigner différentes informations le concernant, telles que son genre, son âge, son statut de fumeur, son niveau de glucose dans le sang, etc. En utilisant des techniques de machine learning, le site détermine si l'utilisateur est susceptible de faire un AVC ou non.
+<br><br>
+Le fonctionnement de ce simulateur est basé sur des modèles prédictifs entraînés à partir de données de patients ayant subi un AVC. Ces modèles ont été créés à l'aide d'algorithmes d'apprentissage automatique qui ont appris à identifier les facteurs de risque les plus importants pour l'AVC. Les modèles utilisent ces facteurs de risque pour estimer la probabilité qu'un patient ait un AVC dans un avenir proche.
+<br><br>
+En renseignant les informations demandées, l'utilisateur fournit les entrées nécessaires pour que le modèle de machine learning puisse prédire ses risques d'AVC. Une fois que le modèle a fait sa prédiction, le site affiche le résultat à l'utilisateur, généralement sous forme de pourcentage de risque d'AVC.
+<br><br>
+Le simulateur de risque d'AVC est un outil utile pour sensibiliser les personnes aux risques d'AVC et les encourager à prendre des mesures préventives pour réduire ces risques. Cependant, il est important de rappeler que les résultats de ce simulateur ne sont que des estimations et ne doivent pas être utilisés comme une source d'informations médicales. En cas de doute ou de préoccupation, il est toujours recommandé de consulter un médecin qualifié.</p>
+    </div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -87,59 +92,6 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-      <div class="container">
-        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h4 class="fw-normal"><strong>Fill this form to predict Brain Stroke risks</strong></h4><br>
-            <p class=" text-warning"><b>A stroke, also known as a cerebrovascular accident or CVA, occurs when a portion of the brain loses blood supply and the part of the body that the blood-deprived brain cells control ceases to function.</b>
-            </p>
-        </div>
-        <div class="container bg-dark text-white">
-            <form action="{{ url_for('result') }}" method="post">
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Gender</label>
-                    <input type="text" class="form-control" id="gender" name="gender" placeholder="1 for Male, 0 for Female">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Enter Age</label>
-                    <input type="text" class="form-control" id="age" name="age" placeholder="Age">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Hypertension</label>
-                    <input type="text" class="form-control" id="hypertension" name="hypertension" placeholder="1 for Yes, 0 for No">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Heart Disease</label>
-                    <input type="text" class="form-control" id="heart_disease" name="heart_disease" placeholder="1 for Yes, 0 for No">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Marrital status</label>
-                    <input type="text" class="form-control" id="ever_married" name="ever_married" placeholder="1 for Yes, 0 for No">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">work type</label>
-                    <input type="text" class="form-control" id="work_type" name="work_type" placeholder="0 for Govn Job, 1 for Never_worked, 2 for Private, 3 for Self-employed, 4 for children">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Residence Type</label>
-                    <input type="text" class="form-control" id="Residence_type" name="Residence_type" placeholder="for Urban 1, for Rural 0">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Enter average glucose level</label>
-                    <input type="text" class="form-control" id="avg_glucose_level" name="avg_glucose_level" placeholder="Average Glucose level">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Enter Body Mass Index (BMI)</label>
-                    <input type="text" class="form-control" id="bmi" name="bmi" placeholder="Body Mass Index (BMI)">
-                </div>               
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Smoking status</label>
-                    <input type="text" class="form-control" id="smoking_status" name="smoking_status" placeholder="0 for Unknown, 1 for formerly smoked, 2 for never smoked, 3 for smokes">
-                </div>
-                <div class="text-center"><button type="submit"id="submit" class="btn btn-danger">Submit</button></div>
-            </form>
-        </div><br><br>
-     </div>
         <footer class="blog-footer">
             <p class="text-center bg-secondary">Hien DINH - Laura KORENFELD <br> EPISEN ITS2 FISA</p>
           </footer>

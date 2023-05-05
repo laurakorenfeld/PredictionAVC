@@ -42,5 +42,9 @@ def result():
     else:
         return render_template('stroke.html')
 
+@app.route("/informations")
+def info():
+    return render_template("informations.html")
+
 if(__name__)=="__main__":
     app.run(debug=False)
