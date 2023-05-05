@@ -46,5 +46,9 @@ def result():
 def info():
     return render_template("informations.html")
 
+@app.route("/contact")
+def info():
+    return render_template("contact.html")
+
 if(__name__)=="__main__":
     app.run(debug=False)

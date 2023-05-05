@@ -13,14 +13,10 @@
     <title>Prédiction AVC</title>
 </head>
 
-<body class="bg-dark text-light">
-    <!--div class="alert alert-dark alert-dismissible fade show text-center mb-0" role="alert">
-        <strong>Hello and welcome to the Brain Stroke Prediction Engine</strong> 
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div-->
+<body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-danger" href="#">Prédiction des risques d'AVC</a>
+            <a class="navbar-brand" href="#">Prédiction des risques d'AVC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -29,22 +25,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#"></a>
                     </li>
-                    <li class="nav-item">
+                    <!--li class="nav-item">
                         <a class="nav-link active" aria-current="page">Analysis</a>
-                    </li>
+                    </li-->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/informations">A propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">Contact us</a>
+                        <a class="nav-link active" aria-current="page" href="/contact">Nous contacter</a>
                     </li>
 
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-danger" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn bg-light" type="submit">Rechercher</button>
                 </form>
             </div>
         </div>
@@ -59,22 +55,22 @@
           <div class="carousel-item active">
             <img src="../static/img/image3.png" class="d-block w-100"height="550px" width="300px" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Stroke Prediction</h5>
-              <p>The main objective of this website is to predict Brain stroke risk in a patient</p>
+              <h5>Prédiction de l'AVC</h5>
+              <p>Cet outil prédictif permet d'évaluer le risque d'AVC chez un patient</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="../static/img/image2.png" class="d-block w-100"height="550px" width="300px" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Stroke Prediction</h5>
-                <p>Early detection of Brain stroke risks can save lives</p>
+                <h5>Prédiction de l'AVC</h5>
+                <p>La détection précoce des risques d'accident vasculaire cérébral peut sauver des vies.</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="../static/img/image.png" class="d-block w-100" height="550px" width="300px" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Stroke Prediction</h5>
-                <p>Medical data is analysed using machine learning techniques for the risk prediction</p>
+                <h5>Prédiction de l'AVC</h5>
+                <p>Les données médicales sont analysées à l'aide de techniques d'apprentissage automatique pour la prédiction des risques.</p>
             </div>
           </div>
         </div>
@@ -90,53 +86,53 @@
 
       <div class="container">
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h4 class="fw-normal"><strong>Fill this form to predict Brain Stroke risks</strong></h4><br>
-            <p class=" text-warning"><b>A stroke, also known as a cerebrovascular accident or CVA, occurs when a portion of the brain loses blood supply and the part of the body that the blood-deprived brain cells control ceases to function.</b>
+            <h4 class="fw-normal"><strong>Remplissez ce formulaire pour évaluer les risque d'AVC</strong></h4><br>
+            <p class=" text-warning"><b>Un AVC (accident vasculaire cérébral), également connu sous le nom d'attaque cérébrale, est une interruption soudaine de l'apport sanguin à une partie du cerveau, qui entraîne la mort des cellules cérébrales en quelques minutes. Cela peut se produire en raison d'une obstruction ou d'une rupture d'un vaisseau sanguin dans le cerveau. Les symptômes de l'AVC peuvent inclure une faiblesse soudaine ou un engourdissement du visage, des bras ou des jambes, des difficultés à parler ou à comprendre la parole, une vision floue, des vertiges, des maux de tête intenses, entre autres. L'AVC est une urgence médicale qui peut entraîner des lésions cérébrales permanentes, une invalidité ou même la mort, il est donc important de recevoir des soins médicaux immédiatement si l'on suspecte un AVC.</b>
             </p>
         </div>
         <div class="container bg-dark text-white">
             <form action="{{ url_for('result') }}" method="post">
                 <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Gender</label>
-                    <input type="text" class="form-control" id="gender" name="gender" placeholder="1 for Male, 0 for Female">
+                    <label for="exampleInputPassword1"  class="form-label">Genre</label>
+                    <input type="text" class="form-control" id="gender" name="gender" placeholder="1 Homme, 0 Femme">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Enter Age</label>
+                    <label for="exampleInputEmail1" class="form-label">Age</label>
                     <input type="text" class="form-control" id="age" name="age" placeholder="Age">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1"  class="form-label">Hypertension</label>
-                    <input type="text" class="form-control" id="hypertension" name="hypertension" placeholder="1 for Yes, 0 for No">
+                    <input type="text" class="form-control" id="hypertension" name="hypertension" placeholder="1 pour Oui, 0 pour Non">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Heart Disease</label>
-                    <input type="text" class="form-control" id="heart_disease" name="heart_disease" placeholder="1 for Yes, 0 for No">
+                    <label for="exampleInputPassword1"  class="form-label">Maladie cardiaque</label>
+                    <input type="text" class="form-control" id="heart_disease" name="heart_disease" placeholder="1 pour Oui, 0 pour Non">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Marrital status</label>
-                    <input type="text" class="form-control" id="ever_married" name="ever_married" placeholder="1 for Yes, 0 for No">
+                    <label for="exampleInputPassword1"  class="form-label">Etat civil : marié, divorcé, veuf ?</label>
+                    <input type="text" class="form-control" id="ever_married" name="ever_married" placeholder="1 pour Oui, 0 pour Non">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">work type</label>
-                    <input type="text" class="form-control" id="work_type" name="work_type" placeholder="0 for Govn Job, 1 for Never_worked, 2 for Private, 3 for Self-employed, 4 for children">
+                    <label for="exampleInputPassword1"  class="form-label">Travail</label>
+                    <input type="text" class="form-control" id="work_type" name="work_type" placeholder="0 Fonctionnaire, 1 N'a jamais travaillé, 2 Privé, 3 Travailleur indépendant, 4 Au foyer">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Residence Type</label>
-                    <input type="text" class="form-control" id="Residence_type" name="Residence_type" placeholder="for Urban 1, for Rural 0">
+                    <label for="exampleInputPassword1"  class="form-label">Lieu de vie</label>
+                    <input type="text" class="form-control" id="Residence_type" name="Residence_type" placeholder="1 pour urbain, 0 pour rural">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Enter average glucose level</label>
-                    <input type="text" class="form-control" id="avg_glucose_level" name="avg_glucose_level" placeholder="Average Glucose level">
+                    <label for="exampleInputEmail1" class="form-label">Glycémie</label>
+                    <input type="text" class="form-control" id="avg_glucose_level" name="avg_glucose_level" placeholder="Glycémie moyenne (taux de glucose dans le sang)">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Enter Body Mass Index (BMI)</label>
-                    <input type="text" class="form-control" id="bmi" name="bmi" placeholder="Body Mass Index (BMI)">
-                </div>               
-                <div class="mb-3">
-                    <label for="exampleInputPassword1"  class="form-label">Smoking status</label>
-                    <input type="text" class="form-control" id="smoking_status" name="smoking_status" placeholder="0 for Unknown, 1 for formerly smoked, 2 for never smoked, 3 for smokes">
+                    <label for="exampleInputEmail1" class="form-label">IMC</label>
+                    <input type="text" class="form-control" id="bmi" name="bmi" placeholder="Indice de Masse Corporelle">
                 </div>
-                <div class="text-center"><button type="submit"id="submit" class="btn btn-danger">Submit</button></div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Fume ?</label>
+                    <input type="text" class="form-control" id="smoking_status" name="smoking_status" placeholder="0 Ne sait pas, 1 Auparavant, 2 Jamais, 3 Oui">
+                </div>
+                <div class="text-center"><button type="submit"id="submit" class="btn bg-light">Valider</button><br><br></div>
             </form>
         </div><br><br>
      </div>
