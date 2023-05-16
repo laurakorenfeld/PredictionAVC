@@ -25,14 +25,14 @@ def result():
 
     x=np.array([gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status]).reshape(1,-1)
 
-    scalar_path=os.path.join('/Users/LKorenfeld/Desktop/Stroke-prediction-main','models/scalar.pkl')
+    scalar_path=os.path.join('models/scalar.pkl')
     scalar=None
     with open(scalar_path,'rb') as scalar_file:
         scalar=pickle.load(scalar_file)
 
     x=scalar.transform(x)
 
-    model_path=os.path.join('/Users/LKorenfeld/Desktop/Stroke-prediction-main','models/lgbm.sav')
+    model_path=os.path.join('models/lgbm.sav')
     lgbm=joblib.load(model_path)
 
     y_pred=lgbm.predict(x)
